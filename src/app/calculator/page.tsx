@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 
-function Calculaate() {
+function Calculate() {
 
     const [number1, setNumber1] = useState<number>(0);
     const [number2, setNumber2] = useState<number>(0);
@@ -52,9 +52,11 @@ function Calculaate() {
 
             <br /><br />
 
-            <strong>Resultado:</strong> {resultado}
+            <div>
+                <strong>Resultado:</strong> {resultado}
+            </div>
         </>
     );
 }
 
-export default Calculaate
+export default Calculate;
