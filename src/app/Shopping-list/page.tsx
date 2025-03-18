@@ -25,6 +25,7 @@ function ShoppingList() {
         }
 
         items.push({...currentItem, id});
+        setCurrentItem({id: 0, name: '', quantity: 1});
     }
 
     return (
@@ -45,6 +46,22 @@ function ShoppingList() {
             />
 
             <button onClick={() => addItem()}>ADICIONAR</button>
+
+            <br /><br />
+
+            <ul>
+                {items.map((item) => (
+                    <li key={item.id}>
+                        {item.name} - {item.quantity} 
+                        <button>
+                            Editar
+                        </button>
+                        <button>
+                            Excluir
+                        </button>
+                    </li>
+                ))}
+            </ul>
         </>
     );
 }
