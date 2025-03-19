@@ -54,10 +54,10 @@ function ShoppingList() {
                     <li key={item.id}>
                         {item.name} - {item.quantity} 
                         <button>
-                            Editar
+                            EDITAR
                         </button>
                         <button>
-                            Excluir
+                            EXCLUIR
                         </button>
                     </li>
                 ))}
