@@ -15,7 +15,8 @@ function ShoppingList() {
         id: 0, 
         name: '', 
         quantity: 1
-    })
+    });
+    const [isEditing, setIsEditing] = useState<boolean>(false);
 
     function addItem() {
         let id = 1;
@@ -45,7 +46,15 @@ function ShoppingList() {
                 onChange={(e) => setCurrentItem({...currentItem, quantity: Number(e.target.value)})}
             />
 
-            <button onClick={() => addItem()}>ADICIONAR</button>
+            <button onClick={() => addItem()} style={{marginLeft: 10}}>
+                {isEditing &&
+                    'SALVAR'    
+                }
+
+                {!isEditing &&
+                    'ADICIONAR'
+                }
+            </button>
 
             <br /><br />
 
@@ -53,10 +62,10 @@ function ShoppingList() {
                 {items.map((item) => (
                     <li key={item.id}>
                         {item.name} - {item.quantity} 
-                        <button>
+                        <button style={{marginLeft: 10}}>
                             EDITAR
                         </button>
-                        <button>
+                        <button style={{marginLeft: 10}}>
                             EXCLUIR
                         </button>
                     </li>
