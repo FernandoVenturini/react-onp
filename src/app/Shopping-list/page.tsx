@@ -48,7 +48,7 @@ function ShoppingList() {
 
             <button onClick={() => addItem()} style={{marginLeft: 10}}>
                 {isEditing &&
-                    'SALVAR'    
+                    'SALVAR EDICAO'    
                 }
 
                 {!isEditing &&
