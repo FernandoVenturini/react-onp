@@ -26,7 +26,7 @@ function ShoppingList() {
     function process() {
         if (!isEditing) {
 
-            let id = 1;
+            let id = 0;
 
             if (items.length > 0) {
                 const lastItem = items[items.length - 1];
